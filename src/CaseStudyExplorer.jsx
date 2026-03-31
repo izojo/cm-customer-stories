@@ -746,6 +746,26 @@ export default function CaseStudyExplorer() {
       </div>
 
       <DetailModal cs={selected} onClose={() => setSelected(null)} />
+
+      {/* Footer */}
+      <div style={{
+        padding: "32px 32px 40px", maxWidth: 1200, margin: "0 auto",
+        borderTop: "1px solid rgba(255,255,255,0.06)",
+        display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
+        fontSize: 13, fontFamily: "'DM Sans', sans-serif",
+        color: "rgba(255,255,255,0.25)",
+      }}>
+        <span>Built by Alex Blanes</span>
+        <span style={{ opacity: 0.4 }}>·</span>
+        <a href="https://alexblanes.com" target="_blank" rel="noopener noreferrer" style={{
+          color: "rgba(255,255,255,0.4)", textDecoration: "none",
+          borderBottom: "1px solid rgba(255,255,255,0.12)",
+          transition: "color 0.2s ease, border-color 0.2s ease",
+        }}
+        onMouseEnter={e => { e.currentTarget.style.color = "rgba(212,168,67,0.7)"; e.currentTarget.style.borderColor = "rgba(212,168,67,0.3)"; }}
+        onMouseLeave={e => { e.currentTarget.style.color = "rgba(255,255,255,0.4)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)"; }}
+        >alexblanes.com</a>
+      </div>
     </div>
   );
 }
