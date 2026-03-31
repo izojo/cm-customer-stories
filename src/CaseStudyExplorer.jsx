@@ -402,12 +402,14 @@ function CaseCard({ cs, onClick }) {
 }
 
 function DetailModal({ cs, onClose }) {
+  const [copied, setCopied] = useState(false);
   useEffect(() => {
     if (!cs) return;
     const handleKey = (e) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [cs, onClose]);
+  useEffect(() => { setCopied(false); }, [cs]);
   if (!cs) return null;
   return (
     <div onClick={onClose} style={{
@@ -530,13 +532,18 @@ function DetailModal({ cs, onClose }) {
           <button onClick={() => {
             const regs = getRegulations(cs.id);
             const text = `${cs.name} (${cs.vertical}, ${cs.geo}) — ${cs.fleetLabel}${regs.length ? `\nRegulations: ${regs.join(", ")}` : ""}\nHeadline: ${cs.headline}${cs.headlineSuffix}\n${cs.summary}\n${cs.quote ? `"${cs.quote}" — ${cs.quotee}` : ""}`;
-            navigator.clipboard.writeText(text).catch(() => {});
+            navigator.clipboard.writeText(text).then(() => {
+              setCopied(true);
+              setTimeout(() => setCopied(false), 2000);
+            }).catch(() => {});
           }} style={{
-            background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)",
-            color: "rgba(255,255,255,0.6)", fontWeight: 600, fontSize: 14,
+            background: copied ? "rgba(100,200,140,0.12)" : "rgba(255,255,255,0.06)",
+            border: copied ? "1px solid rgba(100,200,140,0.3)" : "1px solid rgba(255,255,255,0.12)",
+            color: copied ? "rgba(100,200,140,0.9)" : "rgba(255,255,255,0.6)",
+            fontWeight: 600, fontSize: 14,
             padding: "12px 20px", borderRadius: 10, cursor: "pointer",
-            fontFamily: "'DM Sans', sans-serif",
-          }}>Copy for sales ⎘</button>
+            fontFamily: "'DM Sans', sans-serif", transition: "all 0.2s ease",
+          }}>{copied ? "Copied ✓" : "Copy for sales ⎘"}</button>
         </div>
       </div>
     </div>
