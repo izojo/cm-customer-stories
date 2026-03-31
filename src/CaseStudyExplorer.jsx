@@ -1,6 +1,17 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 const CASE_STUDIES = [
+  {
+    id: 18, name: "Great North Air Ambulance", vertical: "Emergency Services", geo: "UK",
+    fleetSize: "Small (< 50)", fleetLabel: "20 ground vehicles, 2 helicopters",
+    challenges: ["Operational visibility gaps", "Rising insurance costs"],
+    outcomes: ["Driver exoneration", "Accident reduction", "Productivity gains"],
+    headline: "30,000+", headlineSuffix: " incidents responded to",
+    stats: [{ label: "Coverage", value: "8,000 sq mi" }, { label: "Claims defended", value: "2 with video" }],
+    quote: "CameraMatics gives us confidence that our crews and vehicles are protected, even when they're responding to high-pressure, high-risk calls.",
+    quotee: "Araminta Hartley, PR Officer, GNAAS",
+    summary: "Charity-funded air ambulance service deployed GeniePro dashcams and 360° multi-camera systems across 20 rapid response and service vehicles. CameraMatics provides real-time GPS tracking, predictive maintenance alerts, and video evidence — already defending the charity in two insurance claims and ensuring life-saving vehicles stay on the road."
+  },
   {
     id: 1, name: "McCulla", vertical: "Transport & Logistics", geo: "UK & Ireland",
     fleetSize: "Large (200–1,000)", fleetLabel: "100+ trucks, 152 trailers",
@@ -187,17 +198,6 @@ const CASE_STUDIES = [
     quote: "",
     quotee: "",
     summary: "US transportation company partnered with CameraMatics for video-based fleet safety and driver protection."
-  },
-  {
-    id: 18, name: "Great North Air Ambulance", vertical: "Emergency Services", geo: "UK",
-    fleetSize: "Small (< 50)", fleetLabel: "20 ground vehicles, 2 helicopters",
-    challenges: ["Operational visibility gaps", "Rising insurance costs"],
-    outcomes: ["Driver exoneration", "Accident reduction", "Productivity gains"],
-    headline: "30,000+", headlineSuffix: " incidents responded to",
-    stats: [{ label: "Coverage", value: "8,000 sq mi" }, { label: "Claims defended", value: "2 with video" }],
-    quote: "CameraMatics gives us confidence that our crews and vehicles are protected, even when they're responding to high-pressure, high-risk calls.",
-    quotee: "Araminta Hartley, PR Officer, GNAAS",
-    summary: "Charity-funded air ambulance service deployed GeniePro dashcams and 360° multi-camera systems across 20 rapid response and service vehicles. CameraMatics provides real-time GPS tracking, predictive maintenance alerts, and video evidence — already defending the charity in two insurance claims and ensuring life-saving vehicles stay on the road."
   },
 ];
 
@@ -402,6 +402,12 @@ function CaseCard({ cs, onClick }) {
 }
 
 function DetailModal({ cs, onClose }) {
+  useEffect(() => {
+    if (!cs) return;
+    const handleKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [cs, onClose]);
   if (!cs) return null;
   return (
     <div onClick={onClose} style={{
