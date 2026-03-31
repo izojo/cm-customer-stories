@@ -190,14 +190,14 @@ const CASE_STUDIES = [
   },
   {
     id: 17, name: "Conard Transportation", vertical: "Transport & Logistics", geo: "US",
-    fleetSize: "Mid (50–200)", fleetLabel: "US trucking",
-    challenges: ["Fraudulent / false claims", "Driver behaviour & distraction"],
-    outcomes: ["Driver exoneration", "Driver behaviour improvement"],
-    headline: "", headlineSuffix: "",
-    stats: [],
-    quote: "",
-    quotee: "",
-    summary: "US transportation company partnered with CameraMatics for video-based fleet safety and driver protection."
+    fleetSize: "Mid (50–200)", fleetLabel: "40+ semi trucks, 48-state coverage",
+    challenges: ["Fraudulent / false claims", "Operational visibility gaps", "Consolidating disconnected systems"],
+    outcomes: ["Driver exoneration", "Accident reduction", "Productivity gains"],
+    headline: "15 min", headlineSuffix: " to exonerate a driver",
+    stats: [{ label: "Founded", value: "2005" }, { label: "Radius", value: "700 mi from Nashville" }],
+    quote: "The product offers not just the ability to do an autopsy on an accident, but it also helps to prevent one.",
+    quotee: "Dale Conard, CEO",
+    summary: "Tennessee-based family trucking company chose CameraMatics over multiple competitors for its fully integrated camera system (side, rear, pedestrian monitoring, blind spot detection) and standout personal service. In a rear-end collision with no witnesses, Conard pulled rear-camera footage in 15 minutes to prove the other driver was at fault — saving the company from a costly lawsuit."
   },
 ];
 
@@ -218,7 +218,7 @@ const CASE_STUDY_URLS = {
   14: "https://www.cameramatics.com/resources/honer-transport/",
   15: "https://www.cameramatics.com/resources/n-virocycle-waste-recycling/",
   16: "https://www.cameramatics.com/us/resources/customer-stories-cw-wright/",
-  17: "https://www.cameramatics.com/us/resources/conard-transportation/",
+  17: "https://www.cameramatics.com/us/resources/conard-transportation-2/",
   18: "https://www.cameramatics.com/us/resources/great-north-air-ambulance-service/",
 };
 
