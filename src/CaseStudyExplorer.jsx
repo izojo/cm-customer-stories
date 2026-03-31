@@ -179,14 +179,14 @@ const CASE_STUDIES = [
   },
   {
     id: 16, name: "C.W. Wright", vertical: "Energy & Utilities", geo: "US",
-    fleetSize: "Mid (50–200)", fleetLabel: "Utility fleet",
-    challenges: ["Operational visibility gaps", "Rising insurance costs"],
-    outcomes: ["Productivity gains", "Accident reduction"],
-    headline: "★", headlineSuffix: " strategic partner",
-    stats: [{ label: "Key factor", value: "Adaptability" }],
-    quote: "",
-    quotee: "",
-    summary: "US energy and utilities fleet operator selected CameraMatics as a strategic partner for adaptability, scalability, and the quality of the ongoing customer relationship."
+    fleetSize: "Mid (50–200)", fleetLabel: "Mixed fleet — sedans, trucks, construction vehicles",
+    challenges: ["Urban / VRU safety risk", "Driver behaviour & distraction", "Consolidating disconnected systems"],
+    outcomes: ["Accident reduction", "Cost savings", "Productivity gains"],
+    headline: "5-cam", headlineSuffix: " 360° on every vehicle",
+    stats: [{ label: "Founded", value: "1953" }, { label: "Parent", value: "Vinci SA" }],
+    quote: "CameraMatics was the only company that listened to our needs and structured what we needed accordingly.",
+    quotee: "Chris Lively, Fleet Director, C.W. Wright",
+    summary: "Leading US electric utility contractor (subsidiary of PrimeLine / Vinci SA) deployed CameraMatics 5-camera 360° systems across their entire mixed fleet — from compact sedans to specialized construction vehicles. After evaluating multiple industry leaders, C.W. Wright chose CameraMatics for adaptability across diverse vehicle types, competitive pricing, and a tailored approach to their zero-accident safety culture."
   },
   {
     id: 17, name: "Conard Transportation", vertical: "Transport & Logistics", geo: "US",
