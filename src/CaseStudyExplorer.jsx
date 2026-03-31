@@ -188,6 +188,17 @@ const CASE_STUDIES = [
     quotee: "",
     summary: "US transportation company partnered with CameraMatics for video-based fleet safety and driver protection."
   },
+  {
+    id: 18, name: "Great North Air Ambulance", vertical: "Emergency Services", geo: "UK",
+    fleetSize: "Small (< 50)", fleetLabel: "20 ground vehicles, 2 helicopters",
+    challenges: ["Operational visibility gaps", "Rising insurance costs"],
+    outcomes: ["Driver exoneration", "Accident reduction", "Productivity gains"],
+    headline: "30,000+", headlineSuffix: " incidents responded to",
+    stats: [{ label: "Coverage", value: "8,000 sq mi" }, { label: "Claims defended", value: "2 with video" }],
+    quote: "CameraMatics gives us confidence that our crews and vehicles are protected, even when they're responding to high-pressure, high-risk calls.",
+    quotee: "Araminta Hartley, PR Officer, GNAAS",
+    summary: "Charity-funded air ambulance service deployed GeniePro dashcams and 360° multi-camera systems across 20 rapid response and service vehicles. CameraMatics provides real-time GPS tracking, predictive maintenance alerts, and video evidence — already defending the charity in two insurance claims and ensuring life-saving vehicles stay on the road."
+  },
 ];
 
 const CASE_STUDY_URLS = {
@@ -208,6 +219,7 @@ const CASE_STUDY_URLS = {
   15: "https://www.cameramatics.com/resources/n-virocycle-waste-recycling/",
   16: "https://www.cameramatics.com/us/resources/customer-stories-cw-wright/",
   17: "https://www.cameramatics.com/us/resources/conard-transportation/",
+  18: "https://www.cameramatics.com/us/resources/great-north-air-ambulance-service/",
 };
 
 // Regulation tagging — only tagged where evidenced or strongly implied from case study content
@@ -229,6 +241,7 @@ const REGULATION_MAP = {
   15: ["DVS"],                                     // N-Virocycle — explicitly DVS, London operations
   16: [],                                          // C.W. Wright — US utilities
   17: ["ELD"],                                     // Conard — US trucking
+  18: [],                                          // GNAAS — charity air ambulance, no specific regulation cited
 };
 
 const REGULATIONS = ["All", "DVS", "FORS", "CLOCS", "ELD", "Operator's Licence", "ADR / Hazmat"];
@@ -252,7 +265,7 @@ const CHALLENGE_ICONS = {
   "Consolidating disconnected systems": "⧉",
 };
 
-const VERTICALS = ["All", "Transport & Logistics", "Construction & Plant", "Waste & Recycling", "Energy & Utilities", "Passenger Transit", "Field Services"];
+const VERTICALS = ["All", "Transport & Logistics", "Construction & Plant", "Waste & Recycling", "Energy & Utilities", "Passenger Transit", "Field Services", "Emergency Services"];
 const GEOS = ["All", "UK & Ireland", "UK", "US"];
 const FLEET_SIZES = ["All", "Small (< 50)", "Mid (50–200)", "Large (200–1,000)", "Enterprise (1,000+)"];
 const OUTCOMES = ["All", "Cost savings", "Accident reduction", "Driver exoneration", "Compliance achieved", "Driver behaviour improvement", "Productivity gains", "Insurer co-funding"];
