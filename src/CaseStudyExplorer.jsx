@@ -199,7 +199,18 @@ const CASE_STUDIES = [
     quotee: "Dale Conard, CEO",
     summary: "Tennessee-based family trucking company chose CameraMatics over multiple competitors for its fully integrated camera system (side, rear, pedestrian monitoring, blind spot detection) and standout personal service. In a rear-end collision with no witnesses, Conard pulled rear-camera footage in 15 minutes to prove the other driver was at fault — saving the company from a costly lawsuit."
   },
-];
+  {
+    id: 19, name: "Fly by Nite", vertical: "Transport & Logistics", geo: "UK",
+    fleetSize: "Large (200–1,000)", fleetLabel: "200 vehicles, 270 trailers",
+    challenges: ["Regulatory compliance", "Operational visibility gaps", "Driver behaviour & distraction"],
+    outcomes: ["Driver behaviour improvement", "Accident reduction", "Driver exoneration"],
+    headline: "200+", headlineSuffix: " vehicles across 3 continents",
+    stats: [{ label: "DVS compliant", value: "Yes" }, { label: "Theft recovered", value: "Sweden tour" }],
+    quote: "It's one of the best decisions we've made. The real game-changer is being able to log in remotely — wherever the vehicles are, we have full visibility.",
+    quotee: "Luke Price, Transport Manager",
+    summary: "Entertainment logistics specialist — trusted by some of the biggest names in music — deployed CameraMatics 360 across 200+ vehicles operating across UK, Europe, Middle East and North Africa. DVS-compliant for London venue access (Wembley, O2, Royal Albert Hall), the system enabled remote incident response on international tours, including recovering stolen items in Sweden via real-time camera footage."
+  },
+].sort((a, b) => a.name.localeCompare(b.name));
 
 const CASE_STUDY_URLS = {
   1: "https://www.cameramatics.com/resources/customer-stories-how-mcculla-saves-200000-p-a-with-cameramatics/",
@@ -220,6 +231,7 @@ const CASE_STUDY_URLS = {
   16: "https://www.cameramatics.com/us/resources/customer-stories-cw-wright/",
   17: "https://www.cameramatics.com/us/resources/conard-transportation-2/",
   18: "https://www.cameramatics.com/us/resources/great-north-air-ambulance-service/",
+  19: "https://www.cameramatics.com/us/resources/fly-by-nite-and-cameramatics-keeping-the-show-on-the-road/",
 };
 
 // Regulation tagging — only tagged where evidenced or strongly implied from case study content
@@ -242,6 +254,7 @@ const REGULATION_MAP = {
   16: [],                                          // C.W. Wright — US utilities
   17: ["ELD"],                                     // Conard — US trucking
   18: [],                                          // GNAAS — charity air ambulance, no specific regulation cited
+  19: ["DVS"],                                     // Fly by Nite — explicitly DVS compliant for London venues
 };
 
 const REGULATIONS = ["All", "DVS", "FORS", "CLOCS", "ELD", "Operator's Licence", "ADR / Hazmat"];
